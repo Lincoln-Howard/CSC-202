@@ -17,17 +17,24 @@ public interface List <T> {
 	 */
 	public int size ();
 	/**
+	 * Get the index of the first occurrence of the provided data in the list.
+	 * Or -1 if not found.
+	 * @param data
+	 * @return
+	 */
+	public int indexOf (T data);
+	/**
 	 * Insert data at position 0 in the list.
 	 * @param data The data to prepend to the list.
 	 * @return The new size.
 	 */
-	public int prepend (T data);
+	public void prepend (T data);
 	/**
 	 * Insert data at the end of the list.
 	 * @param data The data to append to the list.
 	 * @return The new size.
 	 */
-	public int append (T data);
+	public void append (T data);
 	/**
 	 * Insert data at a given location in the list.
 	 * @param data The data to insert.
@@ -35,7 +42,18 @@ public interface List <T> {
 	 * @return The new size.
 	 * @throws IndexOutOfBoundsException If the location is not in the list.
 	 */
-	public int insert (T data, int location) throws IndexOutOfBoundsException;
+	public void insert (T data, int location) throws IndexOutOfBoundsException;
+	/**
+	 * Remove the data at the provided position in the list.
+	 * @param location The index of the element to remove.
+	 * @throws IndexOutOfBoundsException
+	 */
+	public void remove (int location) throws IndexOutOfBoundsException;
+	/**
+	 * Remove all occurrences of the provided data from the list.
+	 * @param data The data to remove.
+	 */
+	public void remove (T data);
 	/**
 	 * Get data from a specific location in the list.
 	 * @param location The location to get data from.
