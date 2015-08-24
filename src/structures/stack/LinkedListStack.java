@@ -1,4 +1,4 @@
-package stack;
+package structures.stack;
 import structures.list.LinkedList;
 import structures.list.List;
 

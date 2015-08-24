@@ -1,4 +1,4 @@
-package stack;
+package structures.stack;
 /**
  * A simple class for error checking stacks. Used when popping an element from
  * an empty stack.

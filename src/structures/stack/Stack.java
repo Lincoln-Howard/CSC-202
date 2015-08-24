@@ -1,4 +1,4 @@
-package stack;
+package structures.stack;
 /**
  * Define a stack data structure.
  * @author Lincoln Howard
