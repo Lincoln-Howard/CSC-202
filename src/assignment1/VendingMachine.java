@@ -52,6 +52,14 @@ public class VendingMachine implements Serializable {
 		dispensers.add (new Dispenser (info, log));
 	}
 	/**
+	 * Remove the item at the provided location.
+	 * @param location The location to remove.
+	 */
+	public void removeItem (int location) {
+	  costs.remove (location);
+	  dispensers.remove (location);
+	}
+	/**
 	 * Get the cost for the dispenser at a given location.
 	 * @param dispenser The location of the dispenser to check the cost of.
 	 * @return The cost of an item.
