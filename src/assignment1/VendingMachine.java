@@ -96,4 +96,11 @@ public class VendingMachine implements Serializable {
 			throw new InsufficientFundsException ();
 		return dispensers.get (dispenser).purchase ();
 	}
+	/**
+	 * Run the total report for the vending machine.
+	 * @return The report for the machine
+	 */
+	public String report () {
+	  return log.print ();
+	}
 }

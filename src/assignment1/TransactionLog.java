@@ -16,7 +16,11 @@ public class TransactionLog implements Serializable {
 	}
 	
 	public String print () {
-		return "";
+	  String ret = "-------- PURCHASES --------\n";
+	  for (FoodInfo info : purchases) {
+	    ret += info.name () + "\n";
+	  }
+		return ret + "-------- PURCHASES --------";
 	}
 	
 	public void log (FoodInfo entry) {

@@ -50,10 +50,12 @@ public class Main {
 			case "list":
 			case "ls":
 				for (int i = 0; i < food.size (); i++) {
-					System.out.println (i + " -- " + food.info (i).name ());
+					System.out.println (i + " -- " + food.info (i).name () + " (" +
+					     food.stock (i) + ")");
 				}
 				for (int i = 0; i < drink.size (); i++) {
-					System.out.println (i + " -- " + drink.info (i).name ());
+					System.out.println (i + " -- " + drink.info (i).name () + " (" +
+					    drink.stock (i) + ")");
 				}
 				break;
 			case "help":
@@ -146,6 +148,8 @@ public class Main {
 				}
 				break;
 			case "report":
+			  System.out.println (food.report ());
+			  System.out.println (drink.report ());
 				break;
 			case "exit":
 				writeToFile ();
@@ -156,6 +160,15 @@ public class Main {
 		}
 		input.close ();
 		return 0;
+	}
+	// customer
+	public static int customer (Scanner input) {
+	  while (input.hasNextLine ()) {
+	    String line = input.nextLine ();
+	    String [] args = line.split (" ");
+	  }
+	  input.close ();
+	  return 0;
 	}
 	// writer food and drink machines to file
 	public static void writeToFile () {
